@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/myListFragment"
+            android:title="@string/my_list"
+            android:icon="@drawable/ic_view_list_black_24dp"
+    />
+    <item
+            android:id="@+id/overViewFragment"
+            android:title="@string/overview"
+            android:icon="@drawable/ic_check_circle_black_24dp"
+    />
+</menu>

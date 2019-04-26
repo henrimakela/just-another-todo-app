@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">yearlylist</string>
+    <string name="my_list">Listani</string>
+    <string name="overview">Yleisnäkymä</string>
+</resources>

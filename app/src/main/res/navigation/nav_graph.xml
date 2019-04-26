@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph.xml"
+            app:startDestination="@id/myListFragment">
+
+
+    <fragment android:id="@+id/myListFragment" android:name="com.henri.yearlylist.fragments.MyListFragment"
+              android:label="my_list_fragment" tools:layout="@layout/my_list_fragment"/>
+    <fragment android:id="@+id/overViewFragment" android:name="com.henri.yearlylist.fragments.OverViewFragment"
+              android:label="over_view_fragment" tools:layout="@layout/over_view_fragment"/>
+</navigation>
