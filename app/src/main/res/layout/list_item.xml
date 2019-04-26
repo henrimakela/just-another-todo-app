@@ -6,11 +6,15 @@
         <variable
                 name="item"
                 type="com.henri.yearlylist.data.room.Item"/>
+        <variable
+                name="itemClickListener"
+                type="com.henri.yearlylist.ListItemClickListener"/>
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_height="wrap_content"
-       android:layout_width="match_parent">
+       android:layout_width="match_parent"
+        android:onClick="@{() -> itemClickListener.handleClick(item)}">
     <TextView
             android:id="@+id/list_item_title"
             android:layout_width="wrap_content"

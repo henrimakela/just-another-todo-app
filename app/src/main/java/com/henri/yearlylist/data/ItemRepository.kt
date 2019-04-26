@@ -31,6 +31,10 @@ class ItemRepository {
         return allItems
     }
 
+    fun getItem(id: Int): LiveData<Item> {
+        return itemDao.getItemById(id)
+    }
+
     private class InsertItemAsyncTask(itemDao: ItemDao) : AsyncTask<Item, Void, Void?>(){
 
         private lateinit var itemDao: ItemDao

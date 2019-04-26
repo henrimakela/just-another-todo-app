@@ -20,8 +20,12 @@ class ItemViewModel(application: Application): AndroidViewModel(application) {
         return allItems
     }
 
+    fun getItemById(id: Int): LiveData<Item>{
+        return itemRepository.getItem(id)
+    }
+
     fun getTestString(): String{
-        return "pöö"
+        return "lersmo"
     }
     fun insert(item: Item){
         itemRepository.insert(item)
