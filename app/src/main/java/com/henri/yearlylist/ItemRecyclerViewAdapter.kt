@@ -19,7 +19,6 @@ class ItemRecyclerViewAdapter(context: Context) : RecyclerView.Adapter<ItemViewH
         //ei tarvita nyt kun tehdään binding
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item, parent, false)
-        // set the view's size, margins, paddings and layout parameters
 
         val inflater = LayoutInflater.from(parent.context)
         val binding = ListItemBinding.inflate(inflater)

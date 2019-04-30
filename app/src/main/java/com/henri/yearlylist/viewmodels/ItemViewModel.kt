@@ -24,17 +24,14 @@ class ItemViewModel(application: Application): AndroidViewModel(application) {
         return itemRepository.getItem(id)
     }
 
-    fun getTestString(): String{
-        return "lersmo"
-    }
     fun insert(item: Item){
         itemRepository.insert(item)
     }
     fun update(item: Item){
         itemRepository.update(item)
     }
-    fun delete(item: Item){
-        itemRepository.delete(item)
+    fun delete(position: Int){
+        itemRepository.delete(allItems.value!![position])
     }
 
 }
