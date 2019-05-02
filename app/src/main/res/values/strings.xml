@@ -12,4 +12,8 @@
     <string name="no">No</string>
     <string name="mark_item_done">Mark item done</string>
     <string name="description">Description</string>
+    <string name="create">Create</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="work">Work</string>
+    <string name="other">Other</string>
 </resources>

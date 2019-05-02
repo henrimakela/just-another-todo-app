@@ -14,8 +14,7 @@ class ItemOffsetDecoration(private val mItemOffset: Int) : RecyclerView.ItemDeco
         context.getResources().getDimensionPixelSize(
             itemOffsetId
         )
-    ) {
-    }
+    )
 
     override fun getItemOffsets(
         outRect: Rect, view: View, parent: RecyclerView,

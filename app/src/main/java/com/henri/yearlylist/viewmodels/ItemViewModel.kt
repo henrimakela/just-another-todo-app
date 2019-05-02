@@ -11,6 +11,7 @@ class ItemViewModel(application: Application): AndroidViewModel(application) {
 
     private var itemRepository: ItemRepository = ItemRepository(application)
     private lateinit var allItems: LiveData<List<Item>>
+    private lateinit var pendingItem: Item
 
    init{
        allItems = itemRepository.getAllItems()
@@ -32,6 +33,12 @@ class ItemViewModel(application: Application): AndroidViewModel(application) {
     }
     fun delete(position: Int){
         itemRepository.delete(allItems.value!![position])
+    }
+    fun setPendingItem(item: Item){
+        pendingItem = item
+    }
+    fun getPendingItem(): Item{
+        return pendingItem
     }
 
 }
