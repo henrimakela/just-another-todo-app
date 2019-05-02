@@ -21,9 +21,9 @@ abstract class ItemDatabase : RoomDatabase() {
                 synchronized(ItemDatabase::class) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                         ItemDatabase::class.java, "items.db")
-                        .fallbackToDestructiveMigration()
-                        .addCallback(CALLBACK)
-                        .build()
+                        .fallbackToDestructiveMigration().build()
+                        //.addCallback(CALLBACK)
+
                 }
             }
             return INSTANCE!!

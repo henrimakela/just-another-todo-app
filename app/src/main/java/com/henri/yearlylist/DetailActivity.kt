@@ -2,6 +2,7 @@ package com.henri.yearlylist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -26,5 +27,11 @@ class DetailActivity : AppCompatActivity() {
         viewModel.getItemById(intent.extras.get("item_id") as Int).observe(this, Observer {
             binding.item = it
         })
+    }
+
+    fun markItemDone(view: View){
+        var item = binding.item
+        item!!.done = true
+        viewModel.update(item)
     }
 }

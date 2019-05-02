@@ -8,16 +8,18 @@ import java.io.Serializable
 @Entity(tableName = "item_table")
 data class Item(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
-    val title: String,
-    val description: String,
-    val priority: Int
+    var id: Int,
+    var title: String,
+    var description: String,
+    var priority: Int,
+    var done: Boolean
 ) : Serializable {
     @Ignore
-    constructor(title: String = "", description: String = "", priority: Int) : this(
+    constructor(title: String, description: String, priority: Int, done: Boolean = false) : this(
         0,
         title,
         description,
-        priority
+        priority,
+        done
     )
 }

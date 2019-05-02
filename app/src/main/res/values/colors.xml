@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3C474B</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="background">#2A2C2B</color>
+    <color name="colorPrimary">#2B7C7F</color>
+    <color name="colorPrimaryDark">#2B7C7F</color>
+    <color name="colorAccent">#000</color>
+    <color name="background">#2B7C7F</color>
     <color name="priority_high">#DC3522</color>
-    <color name="work">#1D1128</color>
-    <color name="hobby">#6D72C3</color>
-    <color name="other">#1446A0</color>
+    <color name="mainTextColor">#fff</color>
+    <color name="listItemTextColor">#fff</color>
+    <color name="work">#085357</color>
+    <color name="hobby">#18696D</color>
+    <color name="other">#469194</color>
+    <color name="background_dark">#1F211D</color>
 </resources>
