@@ -1,4 +1,4 @@
-package com.henri.yearlylist
+package com.henri.yearlylist.recyclerview
 
 import android.content.Context
 import android.graphics.Rect

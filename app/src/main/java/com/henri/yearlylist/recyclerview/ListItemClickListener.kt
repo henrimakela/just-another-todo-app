@@ -1,4 +1,4 @@
-package com.henri.yearlylist
+package com.henri.yearlylist.recyclerview
 
 import com.henri.yearlylist.data.room.Item
 

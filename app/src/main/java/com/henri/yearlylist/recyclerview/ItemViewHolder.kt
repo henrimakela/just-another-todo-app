@@ -1,10 +1,10 @@
-package com.henri.yearlylist
+package com.henri.yearlylist.recyclerview
 
-import android.graphics.Color
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.henri.yearlylist.R
 import com.henri.yearlylist.data.room.Item
 import com.henri.yearlylist.databinding.ListItemBinding
 

@@ -20,4 +20,8 @@ interface ItemDao {
 
     @Query("SELECT * FROM item_table WHERE id = :id ")
     fun getItemById(id:Int): LiveData<Item>
+
+    @Query("SELECT * FROM item_table WHERE priority = :category")
+    fun getItemsByCategory(category: Int): List<Item>
+
 }

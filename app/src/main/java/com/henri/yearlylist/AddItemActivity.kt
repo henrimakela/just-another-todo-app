@@ -42,14 +42,12 @@ class AddItemActivity : AppCompatActivity() {
         @RequiresApi(Build.VERSION_CODES.N)
         override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
             if (motionEvent.action == MotionEvent.ACTION_DOWN) {
-                val data = ClipData.newPlainText("", "")
                 val shadowBuilder = View.DragShadowBuilder(view)
-                view.startDragAndDrop(data, shadowBuilder, view, 0)
+                view.startDragAndDrop(null, shadowBuilder, view, 0)
                 view.visibility = View.INVISIBLE
                 return true
-            } else {
-                return false
             }
+           return false
         }
     }
 
@@ -69,9 +67,9 @@ class AddItemActivity : AppCompatActivity() {
                 DragEvent.ACTION_DROP -> {
                     var item = viewModel.getPendingItem()
                     when (v.id) {
-                        R.id.drop_area_hobbies -> item.priority = 1
-                        R.id.drop_area_other -> item.priority = 2
-                        R.id.drop_area_work -> item.priority = 3
+                        R.id.drop_area_hobbies -> item.priority = 2
+                        R.id.drop_area_other -> item.priority = 3
+                        R.id.drop_area_work -> item.priority = 1
                     }
                     val view = event.localState as View
                     view.visibility = View.GONE

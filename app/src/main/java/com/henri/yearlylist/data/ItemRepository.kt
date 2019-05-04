@@ -34,6 +34,18 @@ class ItemRepository {
     fun getItem(id: Int): LiveData<Item> {
         return itemDao.getItemById(id)
     }
+    fun getCompletedPercentage(category: Int): String{
+
+        val list = GetItemsByCatAsyncTask(itemDao).execute(category)
+        var completedCount = 0
+
+        list.get().forEach {
+            if(it.done){
+                completedCount ++
+            }
+        }
+        return "${completedCount} out of ${list.get().size}"
+    }
 
     private class InsertItemAsyncTask(itemDao: ItemDao) : AsyncTask<Item, Void, Void?>(){
 
@@ -48,6 +60,21 @@ class ItemRepository {
         }
 
     }
+
+    private class GetItemsByCatAsyncTask(itemDao: ItemDao) : AsyncTask<Int, Void, List<Item>>(){
+
+        private var itemDao: ItemDao
+
+        init {
+            this.itemDao = itemDao
+        }
+        override fun doInBackground(vararg params: Int?): List<Item> {
+            val list = itemDao.getItemsByCategory(params[0]!!)
+            return list
+        }
+
+    }
+
 
     private class UpdateItemAsyncTask(itemDao: ItemDao) : AsyncTask<Item, Void, Void?>(){
 

@@ -6,7 +6,7 @@
             android:bottom="16dp"
             android:left="16dp">
         <shape android:shape="oval">
-            <solid android:color="@color/work"/>
+            <stroke android:width="2dp" android:color="@color/mainTextColor"/>
         </shape>
     </item>
     <item

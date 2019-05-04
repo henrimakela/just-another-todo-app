@@ -1,7 +1,6 @@
 package com.henri.yearlylist.fragments
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -9,17 +8,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.ItemTouchHelper.SimpleCallback
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.henri.yearlylist.AddItemActivity
-import com.henri.yearlylist.ItemOffsetDecoration
-import com.henri.yearlylist.ItemRecyclerViewAdapter
+import com.henri.yearlylist.recyclerview.ItemOffsetDecoration
+import com.henri.yearlylist.recyclerview.ItemRecyclerViewAdapter
 
 import com.henri.yearlylist.R
 import com.henri.yearlylist.databinding.MyListFragmentBinding
@@ -58,7 +54,12 @@ class MyListFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(ItemViewModel::class.java)
         list_recyclerview.adapter = adapter
         list_recyclerview.layoutManager = GridLayoutManager(context, 2)
-        list_recyclerview.addItemDecoration(ItemOffsetDecoration(this.context!!, R.dimen.item_offset))
+        list_recyclerview.addItemDecoration(
+            ItemOffsetDecoration(
+                this.context!!,
+                R.dimen.item_offset
+            )
+        )
 
         viewModel.getAllItems().observe(this, Observer {
             adapter.setItems(it)

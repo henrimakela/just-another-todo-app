@@ -1,15 +1,18 @@
-package com.henri.yearlylist
+package com.henri.yearlylist.recyclerview
 
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.henri.yearlylist.DetailActivity
+import com.henri.yearlylist.R
 import com.henri.yearlylist.data.room.Item
 import com.henri.yearlylist.databinding.ListItemBinding
 
 
-class ItemRecyclerViewAdapter(context: Context) : RecyclerView.Adapter<ItemViewHolder>(), ListItemClickListener {
+class ItemRecyclerViewAdapter(context: Context) : RecyclerView.Adapter<ItemViewHolder>(),
+    ListItemClickListener {
 
     private var context =  context
     var myItems: List<Item> = mutableListOf()

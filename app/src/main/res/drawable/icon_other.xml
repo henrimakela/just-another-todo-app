@@ -5,8 +5,9 @@
             android:right="16dp"
             android:bottom="16dp"
             android:left="16dp">
-        <shape android:shape="oval">
-            <solid android:color="@color/work"/>
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp"/>
+            <stroke android:width="2dp" android:color="@color/mainTextColor"/>
         </shape>
     </item>
     <item
@@ -14,13 +15,15 @@
             android:right="8dp"
             android:bottom="8dp"
             android:left="8dp">
-        <shape android:shape="oval">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp"/>
             <stroke android:width="2dp" android:color="@color/mainTextColor" />
         </shape>
     </item>
     <item>
         <shape
-                android:shape="oval">
+                android:shape="rectangle">
+            <corners android:radius="10dp"/>
             <stroke android:width="2dp"
                     android:color="@color/mainTextColor"/>
         </shape>

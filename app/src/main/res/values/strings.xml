@@ -16,4 +16,6 @@
     <string name="hobbies">Hobbies</string>
     <string name="work">Work</string>
     <string name="other">Other</string>
+    <string name="title">Title</string>
+    <string name="item_done">Item done!</string>
 </resources>

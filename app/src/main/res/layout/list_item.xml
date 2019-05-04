@@ -10,7 +10,7 @@
                 type="com.henri.yearlylist.data.room.Item"/>
         <variable
                 name="itemClickListener"
-                type="com.henri.yearlylist.ListItemClickListener"/>
+                type="com.henri.yearlylist.recyclerview.ListItemClickListener"/>
     </data>
 
     <androidx.cardview.widget.CardView
@@ -39,15 +39,7 @@
                     android:textSize="20sp" android:textAlignment="center" android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp" android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"/>
-            <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    app:srcCompat="@drawable/item_done"
-                    android:layout_alignBottom="@id/item_title"
-                    android:id="@+id/item_done"
-                    android:layout_alignTop="@+id/item_title"
-                    android:visibility="@{item.done ? View.VISIBLE : View.GONE}"
-                    />
+
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

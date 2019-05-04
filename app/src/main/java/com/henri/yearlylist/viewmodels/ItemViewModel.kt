@@ -10,7 +10,7 @@ import com.henri.yearlylist.data.room.Item
 class ItemViewModel(application: Application): AndroidViewModel(application) {
 
     private var itemRepository: ItemRepository = ItemRepository(application)
-    private lateinit var allItems: LiveData<List<Item>>
+    private var allItems: LiveData<List<Item>>
     private lateinit var pendingItem: Item
 
    init{
@@ -39,6 +39,9 @@ class ItemViewModel(application: Application): AndroidViewModel(application) {
     }
     fun getPendingItem(): Item{
         return pendingItem
+    }
+    fun getCompletedPercentage(category: Int): String{
+        return itemRepository.getCompletedPercentage(category)
     }
 
 }
