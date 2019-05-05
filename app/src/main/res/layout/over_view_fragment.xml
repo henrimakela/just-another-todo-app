@@ -20,21 +20,21 @@
 
     <ImageView
             android:src="@drawable/icon_work"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/imageview_work" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="32dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="50dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="56dp"/>
     <ImageView
             android:src="@drawable/icon_hobby"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageview_hobby" android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageview_hobby" android:layout_marginEnd="50dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="56dp"/>
     <ImageView
             android:src="@drawable/icon_other"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/imageview_other"
             android:layout_marginBottom="56dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
